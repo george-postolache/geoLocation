@@ -18,10 +18,14 @@ function showPosition(position) {
 }
 
 function sendMail(lat, long) {
-  var templateParams = {
+    console.log(lat, long);
+  console.log(lat.toString(), long);
+  const templateParams = {
     name: 'James',
     message: 'https://maps.google.com/maps?q='+lat+','+long,
   };
+  console.log(templateParams.message);
+  console.log(templateParams.name);
 
   emailjs.send('service_dkfcjxp', 'template_w7ocdql', templateParams).then(
     (response) => {
