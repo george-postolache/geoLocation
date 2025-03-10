@@ -20,7 +20,7 @@ function showPosition(position) {
 function sendMail(lat, long) {
   var templateParams = {
     name: 'James',
-    messages: 'https://maps.google.com/maps?q='+lat+','+long,
+    message: 'https://maps.google.com/maps?q='+lat+','+long,
   };
 
   emailjs.send('service_dkfcjxp', 'template_w7ocdql', templateParams).then(
